@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import express from 'express';
 const app = express()
 app.use(bodyParser.json())
-const server = mongo.db('test').collection('users')
+const server = mongo.db('TajGram').collection('users')
 app.get('/getUsers', async (req, res) => {
   await mongo.connect();
   const users = await server.find().toArray()
