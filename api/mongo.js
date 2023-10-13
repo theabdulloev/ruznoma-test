@@ -7,7 +7,7 @@ const MongoClient = require('mongodb').MongoClient;
 // const database = 'test'
 // mongodb://${username}:${password}@${host}:${port}/${database}
 
-const url = `mongodb+srv://abdulloev:0CSxryhOnWJEhipW@tojikonbookcl.jsrcsga.mongodb.net/`;
+const url = `mongodb+srv://abdulloev:0CSxryhOnWJEhipW@tojikonbookcl.jsrcsga.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(url);
 
 export default client;
