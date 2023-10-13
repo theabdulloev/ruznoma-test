@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     async getUsers(){
-      const users = await axios.get('/api/getUsers')
+      const users = await axios.get('https://ruznoma-66eikktz8-abdulloev19.vercel.app/products')
       this.users = users.data
     },
     goTo (user) {
