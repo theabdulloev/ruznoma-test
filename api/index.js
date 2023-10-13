@@ -1,4 +1,7 @@
-import mongo from './mongo';
+import { MongoClient } from 'mongodb';
+const url = `mongodb+srv://abdulloev:0CSxryhOnWJEhipW@tojikonbookcl.jsrcsga.mongodb.net/?retryWrites=true&w=majority`;
+const mongo = new MongoClient(url);
+
 import bodyParser from 'body-parser';
 import express from 'express';
 const app = express()
