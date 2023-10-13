@@ -3,10 +3,9 @@ import bodyParser from 'body-parser';
 import express from 'express';
 const app = express()
 app.use(bodyParser.json())
-const server = mongo.db('test').collection('users')
+const server = mongo.db('TajGram').collection('users')
 app.get('/getUsers', async (req, res) => {
   await mongo.connect();
-  console.log("Succses mongo connected")
   const users = await server.find().toArray()
   res.json(users)
 })
@@ -14,7 +13,6 @@ app.get('/getUsers', async (req, res) => {
 
 app.get('/getUsers/:id', async (req, res) => {
   await mongo.connect();
-  console.log("Succses mongo connected"):
   const username = req.params.id
   console.log(req.params)
   const user = await server.find({ username: username}).limit(1).toArray()
