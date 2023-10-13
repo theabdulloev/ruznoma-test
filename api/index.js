@@ -6,7 +6,7 @@ app.use(bodyParser.json())
 const server = mongo.db('test').collection('users')
 app.get('/getUsers', async (req, res) => {
   await mongo.connect();
-  console.log("Succses mongo connected");
+  console.log("Succses mongo connected")
   const users = await server.find().toArray()
   res.json(users)
 })
